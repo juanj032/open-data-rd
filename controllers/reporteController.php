@@ -23,10 +23,24 @@ class reporteController extends Controller
 		$this->_view->render('index',$data);
 	}
 
-    public function  estudiantes($test = "",$test2 = ""){
+    public function  estudiantes($test = "1"){
       	$data = new DataView();
 		$data->title = "Datos estudiantes";
-      	$this->_view->render('index',$data);
+        switch($test){
+            case "1":
+                $this->_view->render('index',$data);
+                break;
+            case "2":
+                $this->_view->render('index2',$data);
+                break;
+            case "3":
+                $this->_view->render('index3',$data);
+                break;
+            case "4":
+                $this->_view->render('index4',$data);
+                break;
+        }
+
     }
 
     public function  viviendas(){
