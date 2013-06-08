@@ -25,24 +25,24 @@ class reporteController extends Controller
 
     public function  estudiantes($test = "",$test2 = ""){
       	$data = new DataView();
-		$data->title = "Test Data";
+		$data->title = "Datos estudiantes";
       	$this->_view->render('index',$data);
     }
 
     public function  viviendas(){
       	$data = new DataView();
-		$data->title = "Test Data";
+		$data->title = "Indicadores de viviendas";
       	$this->_view->render('viviendas',$data);
     }
 
     public function matriculas(){
          $data = new DataView();
-		$data->title = "Test Data";
+		$data->title = "Estudiantes matriculados en el presente año o está inscritos     en la universidad";
       	$this->_view->render('matriculas',$data);	
     }
     public function usoInternet(){
         $data = new DataView();
-        $data->title = "Test Data";
+        $data->title = "Lugares donde se ha usado internet en los últimos 12 mesesa";
         $this->_view->render('usointernet',$data);
     }
 

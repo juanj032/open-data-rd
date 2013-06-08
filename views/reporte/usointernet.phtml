@@ -27,13 +27,22 @@ function genDataSeries($arr){
                 type: 'bar'
             },
             title: {
-                text: '¿Se matriculó en el presente año o está inscrito en la universidad?'
+                text: '¿En qué lugar ha usado Internet en los últimos 12 meses?'
             },
             subtitle: {
                 text: ''
             },
             xAxis: {
-                categories: ['SI','NO','NO SABE','Sin Informacion']
+                categories: ["¿Ha usado el Internet últimos 12 meses fuera o dentro del hogar?",
+                    "En la casa",
+                    "En el trabajo",
+                    "El lugar de estudio",
+                    "Casa de otra persona",
+                    "Lugar público gratuito",
+                    "Centro de llamada",
+                    "Área de uso inalámbrico",
+                    "Otros"]
+
             },
             yAxis: {
                 min: 0,
