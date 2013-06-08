@@ -45,6 +45,11 @@ class reporteController extends Controller
         $data->title = "Lugares donde se ha usado internet en los últimos 12 mesesa";
         $this->_view->render('usointernet',$data);
     }
+    public function frecuenciaUsoInternet(){
+        $data = new DataView();
+        $data->title = "Lugares donde se ha usado internet en los últimos 12 mesesa";
+        $this->_view->render('frecuenciausointernet',$data);
+    }
 
 }
 
