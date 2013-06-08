@@ -2,7 +2,7 @@
 /* Glogal configuration */
 
 	define('DEFAULT_LAYOUT', 'default');
-	define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/app/');
+	define('BASE_URL', 'http://'.$_SERVER['HTTP_HOST'].'/open-data-rd/');
 
     define('DEFAULT_CSS',BASE_URL. 'public/css/' );
     define('DEFAULT_JS',BASE_URL. 'public/js/' );

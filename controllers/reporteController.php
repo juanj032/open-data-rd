@@ -40,6 +40,11 @@ class reporteController extends Controller
 		$data->title = "Test Data";
       	$this->_view->render('matriculas',$data);	
     }
+    public function usoInternet(){
+        $data = new DataView();
+        $data->title = "Test Data";
+        $this->_view->render('usointernet',$data);
+    }
 
 }
 
