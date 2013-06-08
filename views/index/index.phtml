@@ -1,0 +1,122 @@
+<body>
+<div id="page">
+    <div id="content" class="row-fluid">
+
+        <div id="search-wrapper" class="row-fluid ">
+            <div id="search" class="offset1 span10 content ">
+
+                <h1 id="title" class="text-center">OpenData<span>RD</span></h1>
+                <div id="input-search" class="span5 offset3 text-center">
+                    <input id="uno" type="text" class="typeahead1" data-next="dos" data-source="" placeholder="ej: Republica Dominicana">
+                </div>
+                <button id="btn-search" class="span1" type="submit"><i class="icon-search icon-white"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="indicators-wrapper" class="row-fluid ">
+         <div class="offset1 span10 content">
+             <h3 class="text-center ">Indicadores</h3>
+         </div>
+     </div>-->
+    <div id="data-wrapper" class="row-fluid">
+        <div id="data" class="span10 offset1 content">
+            <div id="navbar">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li>
+                        <a href="#educacion" data-toggle="tab"><i class="icon-book icon-white"></i>Educacion</a>
+                    </li>
+                    <li>
+                        <a href="#vivienda" data-toggle="tab"><i class="icon-home icon-white"></i>Vivienda</a>
+                    </li>
+                    <li>
+                        <a href="#demografico" data-toggle="tab"><i class="icon-globe icon-white"></i>Demografico</a>
+                    </li>
+                    <li>
+                        <a href="#estadisticas" data-toggle="tab"><i class="icon-tasks icon-white"></i>Estadisticas</a>
+                    </li>
+                    <li>
+                        <a href="#probreza" data-toggle="tab"><i class="icon-arrow-down icon-white"></i>Pobreza</a>
+                    </li>
+                    <li>
+                        <a href="#seguridadSocial" data-toggle="tab"><i class=" icon-user icon-white"></i>Seguridad Social </a>
+                    </li>
+                    <li>
+                        <a href="#salud" data-toggle="tab"><i class="icon-heart icon-white"></i>Salud</a>
+                    </li>
+                </ul>
+                </div>
+                <div id="data-show">
+                    <div class="btn dropdown pull-right">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-download"></i>Descargas</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelleedby="dLabel">
+                            <li><a href="#csv">.csv</a></li>
+                            <li><a href="#pdf">.pdf</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane" id="educacion">
+                        <IFRAME src="reporte/estudiantes" width="100%" height="100%"></IFRAME>
+                        <IFRAME src="reporte/matriculas" width="100%" height="100%"></IFRAME>
+                        </div>
+                        <div class="tab-pane active" id="vivienda">
+                         <IFRAME src="reporte/viviendas" width="100%" height="100%"></IFRAME>
+                        </div>
+                        <div class="tab-pane" id="demografico">...</div>
+                        <div class="tab-pane" id="estadisticas">...</div>
+                        <div class="tab-pane" id="probreza">...</div>
+                        <div class="tab-pane" id="seguridadSocial">...</div>
+                        <div class="tab-pane" id="salud">...</div>
+                    </div>
+                </div>
+
+                <div>
+                    No es la informacion que buscabas? Envianos tus <a href="#sug" class="sugerencias">sugerencias</a>
+                </div>
+            </div>
+        </div>
+        <div id = "myModal" class="modal hide fade">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h3>Envia tus sugerencias</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+
+                    <div class="control-group">
+                        <label class="control-label" for="name">Nombre</label>
+                        <div class="controls">
+                            <input type="text" id="name" placeholder="">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail">Correo</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputPassword">Sugerencia</label>
+                        <div class="controls">
+                            <textarea rows="3"></textarea>
+<!--                            <input type="password" id="inputPassword" placeholder="Password">-->
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a id="btnModalClose"href="#" class="btn btn-success " data-dismiss="modal">Enviar</a>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/jquery.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-tab.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-typeahead.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-button.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-dropdown.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-modal.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/chosen.jquery.min.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/data.js"></script>
+    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/main.js"></script>
+</body>
+</html>

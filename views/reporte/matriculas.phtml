@@ -1,0 +1,101 @@
+<?php
+$reguiones = array("Cibao Norte","Cibao Sur","Cibao Nordeste","Cibao Noroeste","Valdesia","Enriquillo","El Valle","Yuma","Higuamo","Ozama o Metropolitana");
+
+function genCategories($arr){
+    $res = "";
+    foreach($arr as $a){
+        $res.="'{$a}',";
+    }
+    $res = substr($res,0,-1);
+    return $res;
+}
+function genDataSeries($arr){
+    $res = "";
+    foreach($arr as $a){
+       $res.="['{$a}',".rand(500, 8000)."],";
+    }
+    $res = substr($res,0,-1);
+    return $res;
+}
+?>
+<script  src="<?php echo DEFAULT_ASSETS?>javascripts/highcharts.js"></script>
+<script  src="<?php echo DEFAULT_ASSETS?>modules/exporting.js"></script>
+    <script async type="text/javascript">
+        $(function () {
+            $('#container').highcharts({
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: '¿Se matriculó en el presente año o está inscrito en la universidad?'
+                },
+                subtitle: {
+                    text: ''
+                },
+                xAxis: {
+                    categories: ['SI','NO','NO SABE','Sin Informacion']
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Porcentage'
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                    pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                        '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+                    footerFormat: '</table>',
+                    shared: true,
+                    useHTML: true
+                },
+                plotOptions: {
+                    column: {
+                        pointPadding: 0.2,
+                        borderWidth: 0
+                    }
+                },
+
+                series: [{
+                    name: "Cibao Norte",
+                    data: [33.8,64.6,0.0,1.6]
+                }, {
+                    name: "Cibao Sur",
+                    data: [35.1,64.3,0.0,0.7]
+                }, {
+                    name: "Cibao Nordeste",
+                    data: [38.2,61.5,0.0,0.2]
+                }, {
+                    name: "Cibao Nordoeste",
+                    data: [34.9,64.2,0.0,0.9]
+                }, {
+                    name: "Valdesia",
+                    data: [39.0,59.7,0.1,1.3]
+                }, {
+                    name: "Enriquillo",
+                    data: [43.2,55.8,0.0,1.1]
+                }, {
+                    name: "El Valle",
+                    data: [40.4,58.8,0.0,0.8]
+                }, {
+                    name: "Yuma",
+                    data: [34.1,64.9,0.0,1.0]
+                }, {
+                    name: "Higuamo",
+                    data: [37.8,61.6,0.0,0.6]
+                }, {
+                    name: "Ozama o Metropolitana",
+                    data: [39.6,59.7,0.0,0.7]
+                }
+                ]
+            });
+        });
+
+
+    </script>
+
+
+<div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+
+</body>
+</html>
