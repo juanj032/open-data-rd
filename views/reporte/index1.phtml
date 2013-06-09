@@ -1,0 +1,72 @@
+<?php
+$provincias = array("DISTRITO NACIONAL","AZUA","BAORUCO","BARAHONA","DUARTE","EL SEIBO","ESPAILLAT","INDEPENDENCIA","LA ALTAGRACIA","LA ROMANA","LA VEGA","MONTE CRISTI","PEDERNALES","PERAVIA","PUERTO PLATA","HERMANAS MIRABAL","SAN JUAN","SANTIAGO","VALVERDE","MONTE PLATA","HATO MAYOR","SANTO DOMINGO");
+
+function genCategories($arr){
+    $res = "";
+    foreach($arr as $a){
+        $res.="'{$a}',";
+    }
+    $res = substr($res,0,-1);
+    return $res;
+}
+function genDataSeries($arr){
+    $res = "";
+    foreach($arr as $a){
+        if($a == "SANTO DOMINGO" || $a == "DISTRITO NACIONAL"){
+            $res.="['{$a}',".rand(8000, 15000)."],";
+        }
+        else{
+            $res.="['{$a}',".rand(500, 8000)."],";
+        }
+
+    }
+    $res = substr($res,0,-1);
+    return $res;
+}
+?>
+<script  src="<?php echo DEFAULT_ASSETS?>javascripts/highcharts.js"></script>
+<script  src="<?php echo DEFAULT_ASSETS?>modules/exporting.js"></script>
+<div id="indicador2"></div>
+<script async type="text/javascript">
+    $(function () {
+
+    $('#indicador2').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Proporción de estudiantes por provincia'
+        },
+        subtitle: {
+            text: 'Proporción de estudiantes por provincia (Demostración)'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage}%</b>',
+            percentageDecimals: 1
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    color: '#000000',
+                    connectorColor: '#000000',
+                    formatter: function () {
+                        return '<b>' + this.point.name + '</b>: ' + Highcharts.numberFormat(this.percentage, 2, ',') + ' %';
+                    }
+                }
+            }
+        },
+        series: [
+            {
+                type: 'pie',
+                name: 'Escuelas',
+                data: [<?php echo genDataSeries($provincias); ?>]
+            }
+        ]
+    });
+    });
+</script>
