@@ -1,5 +1,5 @@
 body{
-  background-image: url(../../images/bg.jpg);
+  background-image: url(#{$imagesDirectory}});
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -24,6 +24,13 @@ div#search-wrapper{
   h1{margin-bottom: 1%;}
 }
 
+div#advanced-search{
+  margin-top: 1%;
+  border: 2px solid $blue;
+  padding: 1%;
+  border-radius: 5px;
+}
+
 div#search{
   margin-top: 2%;
 }
@@ -32,7 +39,6 @@ div#search{
   background-color: $white;
   border-radius: 6px;
   padding: 1%;
-  box-shadow: 0 0 10px #6d6d6d;
   margin-bottom: 2%;
   margin-top: 2%;
 }

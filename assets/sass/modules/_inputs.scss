@@ -54,3 +54,14 @@ div#input-search{
 [class^="icon-"], [class*=" icon-"]{
   margin-right: 3px;
 }
+
+#btn-advanced-search{
+  float: right;
+  bottom: 69%;
+  position: relative;
+  @include transition(all);
+  @include transition-duration(200ms);
+  &:hover{
+    text-decoration: none;
+  }
+}

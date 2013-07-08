@@ -1,4 +1,3 @@
-<body>
 <div id="page">
     <div id="content" class="row-fluid">
 
@@ -6,11 +5,44 @@
             <div id="search" class="offset1 span10 content ">
 
                 <h1 id="title" class="text-center">OpenData<span>RD</span></h1>
+
                 <div id="input-search" class="span5 offset3 text-center">
-                    <input id="uno" type="text" class="typeahead1" data-next="dos" data-source="" placeholder="ej: Republica Dominicana">
+                    <input id="uno" type="text" placeholder="ej: Republica Dominicana">
+                    <a id="btn-advanced-search" href="#advanced-search"><i class="icon-chevron-down "></i></a>
                 </div>
+
+
+
                 <button id="btn-search" class="span1" type="submit"><i class="icon-search icon-white"></i></button>
+
+                <!-- Advance Search -->
+                <div id="advanced-search" class="span5 offset3">
+                    <div class="control-group">
+                        <label class="control-label" for="txtLugar">Lugar:</label>
+                        <div class="controls">
+                            <input type="text" id="txtLugar" class="input-block-level" placeholder="Santo Domingo">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="txtCategoria">Categoria:</label>
+                        <div class="controls">
+                            <select id="selectCategorias">
+                                <option><i class="icon-book icon-white"></i>Educacion</option>
+                                <option><i class="icon-home icon-white"></i>Vivienda</option>
+                                <option><i class="icon-globe icon-white"></i>Demografico</option>
+                                <option><i class="icon-tasks icon-white"></i>Estadisticas</option>
+                                <option><i class="icon-arrow-down icon-white"></i>Pobreza</option>
+                                <option><i class=" icon-user icon-white"></i>Seguridad Social</option>
+                                <option><i class="icon-heart icon-white"></i>Salud</option>
+
+                            </select>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
+
         </div>
     </div>
     <!-- <div id="indicators-wrapper" class="row-fluid ">
@@ -18,7 +50,7 @@
              <h3 class="text-center ">Indicadores</h3>
          </div>
      </div>-->
-    <div id="data-wrapper" class="row-fluid">
+    <!--<div id="data-wrapper" class="row-fluid">
         <div id="data" class="span10 offset1 content">
             <div id="navbar">
                 <ul id="myTab" class="nav nav-tabs">
@@ -98,7 +130,7 @@
                         <label class="control-label" for="inputPassword">Sugerencia</label>
                         <div class="controls">
                             <textarea rows="3"></textarea>
-<!--                            <input type="password" id="inputPassword" placeholder="Password">-->
+<!--                            <input type="password" id="inputPassword" placeholder="Password">
                         </div>
                     </div>
                 </form>
@@ -108,15 +140,4 @@
             </div>
         </div>
     </div>
-    <!-- Scripts -->
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/jquery.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-tab.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-typeahead.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-button.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-dropdown.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/bootstrap-modal.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/chosen.jquery.min.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/data.js"></script>
-    <script src="<?php echo DEFAUL_ASSETS ?>javascripts/main.js"></script>
-</body>
-</html>
+-->

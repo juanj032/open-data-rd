@@ -1,3 +1,7 @@
+$('#btn-advanced-search').on('click', function(){
+    console.log('click');
+    $('div#advanced-search').slideToggle(150, "linear");
+});
 
 $('.nav-tabs>li').on('click', function(){
 
